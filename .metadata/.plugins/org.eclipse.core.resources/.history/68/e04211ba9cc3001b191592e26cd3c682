@@ -1,0 +1,11 @@
+package com.flight.dao;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.flight.entity.CoPassenger;
+
+@Transactional
+public interface CoPassengerDao extends JpaRepository<CoPassenger, Integer> {
+
+}

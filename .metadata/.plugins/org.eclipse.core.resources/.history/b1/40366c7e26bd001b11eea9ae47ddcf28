@@ -1,0 +1,40 @@
+package com.flight.entity;
+
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Table(name="airline_info")
+public class Airline {
+	@Id
+	@GeneratedValue
+	private int airlineId;
+	private String airlineName;
+	private String airlineLogo;
+	
+	@Override
+	public String toString() {
+		return "Airline [airlineId=" + airlineId + ", airlineName=" + airlineName + ", airlineLogo=" + airlineLogo
+				+ "]";
+	}
+	public int getAirlineId() {
+		return airlineId;
+	}
+	public void setAirlineId(int airlineId) {
+		this.airlineId = airlineId;
+	}
+	public String getAirlineName() {
+		return airlineName;
+	}
+	public void setAirlineName(String airlineName) {
+		this.airlineName = airlineName;
+	}
+	public String getAirlineLogo() {
+		return airlineLogo;
+	}
+	public void setAirlineLogo(String airlineLogo) {
+		this.airlineLogo = airlineLogo;
+	}
+	
+
+}

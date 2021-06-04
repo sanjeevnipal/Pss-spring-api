@@ -1,0 +1,29 @@
+package com.flight.entity;
+
+import java.time.LocalDateTime;
+
+public class CheckIn {
+
+	
+	private int checkinId;
+	private LocalDateTime checkinTime;
+	private String seatNumber;
+	public int getCheckinId() {
+		return checkinId;
+	}
+	public void setCheckinId(int checkinId) {
+		this.checkinId = checkinId;
+	}
+	public LocalDateTime getCheckinTime() {
+		return checkinTime;
+	}
+	public void setCheckinTime(LocalDateTime checkinTime) {
+		this.checkinTime = checkinTime;
+	}
+	public String getSeatNumber() {
+		return seatNumber;
+	}
+	public void setSeatNumber(String seatNumber) {
+		this.seatNumber = seatNumber;
+	}
+}

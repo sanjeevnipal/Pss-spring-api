@@ -1,0 +1,19 @@
+package practicetest;
+
+import java.time.LocalDate;
+import java.time.Month;
+
+public class Practice1  {
+	
+	 // Other methods…
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+//	final String str = "test";
+//	str.chars().forEach(ch-> System.out.println(ch));
+		LocalDate date = LocalDate.of(2019, Month.MARCH , 30);
+		System.out.println("Date="+date);
+
+		   
+	}
+
+}

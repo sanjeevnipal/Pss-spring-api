@@ -1,0 +1,21 @@
+package com.flight;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+
+import com.flight.dao.FlightDao;
+
+@SpringBootApplication
+public class FlightApplication {
+
+	public static void main(String[] args) {
+		ApplicationContext ac = SpringApplication.run(FlightApplication.class, args);
+		FlightDao flightDao = ac.getBean(FlightDao.class);
+		
+		 flightDao.findAll().forEach(flight->{
+				 System.out.println(flight);
+				 });
+	}
+
+}

@@ -1,0 +1,9 @@
+package com.flight.dao;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.flight.entity.BookingRecord;
+
+public interface BookingDao extends JpaRepository<BookingRecord, Integer>{
+
+}

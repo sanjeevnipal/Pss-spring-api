@@ -1,0 +1,38 @@
+package com.flight.service;
+
+import java.time.LocalDateTime;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.flight.dao.BookingDao;
+import com.flight.dao.CheckInDao;
+import com.flight.entity.BookingRecord;
+import com.flight.entity.CheckIn;
+import com.flight.entity.Flight;
+
+public class CheckInImplService implements CheckInService {
+	
+	@Autowired
+	private BookingDao bookingDao;
+	
+	@Autowired
+	private CheckInDao checkInDao;
+	
+	@Override
+	public CheckIn checkInFlight(int id) {
+		BookingRecord bookingRecord = bookingDao.findById(id).orElse(null);
+		
+		CheckIn checkIn = new CheckIn();
+				checkIn.setCheckinTime(LocalDateTime.now());
+				checkIn.setSeatNumber("A5");
+				checkInDao.save(checkIn);
+				bookingRecord.setStatus("CHECKEDIN");
+				bookingDao.save(bookingRecord);
+				
+				return checkIn;
+				
+	}
+	
+	
+
+}
